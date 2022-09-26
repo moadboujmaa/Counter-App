@@ -81,7 +81,7 @@ export default class Counter extends Component {
     render() {
         return (
             <div className="container">
-                <Valeur valeur={this.state.counter < 0 ? <span className="red">{this.state.counter}</span> : <span className="green">{this.state.counter}</span>}/>
+                <Valeur counter={this.state.counter} class={this.state.counter >= 0 ? "green" : "red"}/>
                 {/* Action Buttons */}
                 <div className="action-btns">
                     <button onClick={this.decrement} className="btn">-</button>
